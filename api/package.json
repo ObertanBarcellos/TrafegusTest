@@ -1,0 +1,33 @@
+{
+  "name": "Trafegus API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "NODE_OPTIONS='--loader ts-node/esm' ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "typeorm": "typeorm-ts-node-commonjs"
+  },
+  "keywords": [],
+  "author": "Obertan Barcellos",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0",
+    "pg": "^8.14.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.21"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.11.13",
+    "@swc/helpers": "^0.5.15",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.13",
+    "regenerator-runtime": "^0.14.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
