@@ -73,9 +73,9 @@ export default function DriversTab() {
 
     const columns = [
         { title: 'ID', field: 'id', sortable: false, headerSort: false, },
-        { title: 'Nome', field: 'name', sortable: false, headerSort: false, editor: "input" },
-        { title: 'RG', field: 'rg', sortable: false, headerSort: false, editor: "input" },
-        { title: 'CPF', field: 'cpf', sortable: false, headerSort: false, editor: "input" },
+        { title: 'Nome', field: 'name', sortable: false, headerSort: false, editor: "input", headerFilter: "input" },
+        { title: 'RG', field: 'rg', sortable: false, headerSort: false, editor: "input", headerFilter: "input" },
+        { title: 'CPF', field: 'cpf', sortable: false, headerSort: false, editor: "input", headerFilter: "input" },
         {
             title: 'Telefone',
             field: 'phone',

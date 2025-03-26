@@ -1,8 +1,8 @@
 import './cars-tab.scss'
 import {deleteCar, updateCar} from "../../services/cars.ts";
 import {reactFormatter, ReactTabulator} from "react-tabulator";
-import 'react-tabulator/lib/styles.css';
-import 'react-tabulator/lib/css/tabulator.min.css';
+import "react-tabulator/lib/styles.css";
+import "react-tabulator/lib/css/semantic-ui/tabulator_semantic-ui.css";
 import CarsActions from "./cars-actions/cars-actions.tsx";
 import {IconButton, Tooltip} from "@mui/material";
 import SaveAsIcon from '@mui/icons-material/SaveAs';
@@ -76,7 +76,7 @@ export default function CarsTab() {
 
     const columns = [
         { title: 'ID', field: 'id', sortable: false, headerSort: false, },
-        { title: 'Placa', field: 'plate', sortable: false, headerSort: false, editor: "input" },
+        { title: 'Placa', field: 'plate', sortable: false, headerSort: false, editor: "input", headerFilter: "input" },
         {
             title: 'Renavam',
             field: 'reindeer',
@@ -102,6 +102,10 @@ export default function CarsTab() {
         }
     ]
 
+    const options = {
+
+    }
+
     return (
         <>
             <div className={ 'cars-tab' }>
@@ -111,6 +115,7 @@ export default function CarsTab() {
                     // @ts-ignore
                     columns={ columns }
                     layout={ 'fitColumns' }
+                    // options={ options }
                 />
                 <CustomSnackbar message={ snackbarMessage } open={ snackbar } setOpen={ setSnackbar } />
             </div>
