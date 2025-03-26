@@ -1,19 +1,22 @@
 import './styles/main.scss'
-import LeftMenu from "./components/left-menu/left-menu.tsx";
+import './App.scss'
 import {Outlet} from "react-router-dom";
+import Header from "./components/header/header.tsx";
 
 function App() {
 
-  return (
-    <>
-      <div className={ 'main-container' }>
-        <LeftMenu />
-        <div className={ 'safe-area' }>
-            <Outlet />
-        </div>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <div className={ `app-container` }>
+                <div className={ 'home-container' }>
+                    <Header />
+                    <div className={ 'safe-area' }>
+                        <Outlet />
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default App

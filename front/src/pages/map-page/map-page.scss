@@ -1,0 +1,18 @@
+.map-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+
+  img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .map-page {
+    img {
+      width: 600px;
+    }
+  }
+}

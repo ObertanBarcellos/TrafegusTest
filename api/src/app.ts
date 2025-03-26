@@ -1,10 +1,12 @@
 import "reflect-metadata";
 import express from "express";
+import cors from 'cors';
 import {AppDataSource} from "./data-source";
 import carRoutes from "./routes/carRoutes";
 import driverRoutes from "./routes/driverRoutes";
 
 const app = express()
+app.use(cors())
 const PORT = 5000
 
 app.use(express.json())
